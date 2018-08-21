@@ -200,8 +200,6 @@ UpgradeLog*.XML
 UpgradeLog*.htm
 
 # SQL Server files
-*.mdf
-*.ldf
 
 # Business Intelligence projects
 *.rdl.data
@@ -240,3 +238,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# ignore the .vs folder kevin
+.vs/
