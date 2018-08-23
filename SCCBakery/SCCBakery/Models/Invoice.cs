@@ -21,5 +21,8 @@ namespace SCCBakery.Models
 
         [Required]
         public int ProductID { get; set; }
+
+        [Required]
+        public Int16 Quantity { get; set; }
     }
 }

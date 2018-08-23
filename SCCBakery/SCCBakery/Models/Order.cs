@@ -7,16 +7,15 @@ using System.Web;
 
 namespace SCCBakery.Models
 {
+    [Table("Orders")]
     public class Order
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderID { get; set; }
 
-        public AccountModel TheAccount {get; set;}
-
         [Required]
         public int CustomerID { get; set; }
 
-        public int OrderTotal { get; set; }
+        public decimal OrderTotal { get; set; }
     }
 }
