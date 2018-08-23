@@ -6,7 +6,8 @@ using System.Linq;
 using System.Web;
 
 namespace SCCBakery.Models
-{
+{   
+    [Table("Accounts")]
     public class AccountModel
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
