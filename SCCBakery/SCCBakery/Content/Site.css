@@ -25,4 +25,5 @@ textarea {
 
 .jumbotron{
       background-image:  url('../images/Bakery2.jpg');
+      text-align: center;
 }
