@@ -26,5 +26,12 @@ namespace SCCBakery.Controllers
 
             return View();
         }
+
+        public ActionResult Cart()
+        {
+            ViewBag.Message = "Your Cart.";
+
+            return View();
+        }
     }
 }

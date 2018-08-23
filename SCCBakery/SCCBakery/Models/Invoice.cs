@@ -13,6 +13,7 @@ namespace SCCBakery.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int InvoiceID { get; set; }
 
+        public Order TheOrder { get; set; }
         [Required]
         public int OrderID {get; set;}
 
@@ -20,5 +21,8 @@ namespace SCCBakery.Models
 
         [Required]
         public int ProductID { get; set; }
+
+        [Required]
+        public Int16 Quantity { get; set; }
     }
 }
