@@ -7,18 +7,22 @@ using System.Web;
 
 namespace SCCBakery.Models
 {
-    [Table("Orders")]
-    public class Order
+    public class Cart
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int OrderID { get; set; }
+        public int InvoiceID { get; set; }
 
         [Required]
-        public int CustomerID { get; set; }
+        public int ProductID { get; set; }
 
         [Required]
-        public DateTime OrderTime { get; set; }
+        public string ProductName { get; set; }
 
-        public decimal OrderTotal { get; set; }
+        [Required]
+        public string ProductDescription {get;set;}
+
+        public decimal ProductPrice { get; set; }
+
+        public int Quantity { get; set; }
     }
 }
