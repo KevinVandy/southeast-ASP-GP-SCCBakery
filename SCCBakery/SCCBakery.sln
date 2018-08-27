@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCCBakery", "SCCBakery\SCCBakery.csproj", "{21F64EB8-780B-4DC2-A5D4-8706B3681F1B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCCBakery", "SCCBakery\SCCBakery.csproj", "{852DD522-E20D-4B42-B8DF-0A0398EC590A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21F64EB8-780B-4DC2-A5D4-8706B3681F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{21F64EB8-780B-4DC2-A5D4-8706B3681F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{21F64EB8-780B-4DC2-A5D4-8706B3681F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{21F64EB8-780B-4DC2-A5D4-8706B3681F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852DD522-E20D-4B42-B8DF-0A0398EC590A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852DD522-E20D-4B42-B8DF-0A0398EC590A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852DD522-E20D-4B42-B8DF-0A0398EC590A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852DD522-E20D-4B42-B8DF-0A0398EC590A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1BFA5EE1-381F-4C4F-A34D-6F009A674E9C}
 	EndGlobalSection
 EndGlobal
