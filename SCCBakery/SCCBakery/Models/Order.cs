@@ -16,6 +16,9 @@ namespace SCCBakery.Models
         [Required]
         public int CustomerID { get; set; }
 
+        [Required]
+        public DateTime OrderTime { get; set; }
+
         public decimal OrderTotal { get; set; }
     }
 }
