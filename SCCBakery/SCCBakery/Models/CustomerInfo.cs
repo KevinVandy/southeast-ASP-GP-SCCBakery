@@ -7,11 +7,11 @@ using System.Web;
 
 namespace SCCBakery.Models
 {
-    [Table("UserInfo")]
-    public class UserInfo
+    [Table("CustomerInfo")]
+    public class CustomerInfo
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int UserId { get; set; }
+        public int CustomerId { get; set; }
 
         [Required]
         public string FirstName { get; set; }
