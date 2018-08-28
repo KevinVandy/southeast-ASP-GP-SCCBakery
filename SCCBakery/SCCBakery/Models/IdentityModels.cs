@@ -23,6 +23,7 @@ namespace SCCBakery.Models
         public DbSet<Invoice> Invoice { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Product> Product { get; set;}
+        public DbSet<UserInfo> User { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
