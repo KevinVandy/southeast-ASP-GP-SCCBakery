@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201808262345338_InitialCreate.Designer.cs">
       <DependentUpon>201808262345338_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808280044034_addedthings.cs" />
+    <Compile Include="Migrations\201808280044034_addedthings.Designer.cs">
+      <DependentUpon>201808280044034_addedthings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -298,6 +302,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808262345338_InitialCreate.resx">
       <DependentUpon>201808262345338_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808280044034_addedthings.resx">
+      <DependentUpon>201808280044034_addedthings.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
