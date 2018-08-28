@@ -10,6 +10,7 @@ namespace SCCBakery.Models
     [Table("CustomerInfo")]
     public class CustomerInfo
     {
+        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CustomerId { get; set; }
 
