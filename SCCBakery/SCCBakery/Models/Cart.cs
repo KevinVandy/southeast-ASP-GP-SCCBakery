@@ -9,20 +9,28 @@ namespace SCCBakery.Models
 {
     public class Cart
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int InvoiceID { get; set; }
+        public List<CartItem> Items { get; set; }
 
-        [Required]
-        public int ProductID { get; set; }
+        static Cart()
+        {
+            //get and set sessions
+            //if (HttpContext.Current.Session["ASPNETShoppingCart"] == null)
+            //{
+            //    Instance = new Cart();
+            //    Instance.Items = new List<CartItem>();
+            //    HttpContext.Current.Session["ASPNETShoppingCart"] = Instance;
+            //}
+            //else
+            //{
+            //    Instance = (Cart)HttpContext.Current.Session["ASPNETShoppingCart"];
+            //}
+        }
 
-        [Required]
-        public string ProductName { get; set; }
+        protected Cart() { }
 
-        [Required]
-        public string ProductDescription { get; set; }
+        public void AddItem(int productID)
+        {
 
-        public decimal ProductPrice { get; set; }
-
-        public int Quantity { get; set; }
+        }
     }
 }
