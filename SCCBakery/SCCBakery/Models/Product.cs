@@ -21,5 +21,7 @@ namespace SCCBakery.Models
         [Required]
         public decimal ProductPrice { get; set; }
 
+        public string ProductImagePath { get; set; }
+
     }
 }
