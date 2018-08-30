@@ -7,29 +7,44 @@ using System.Web;
 
 namespace SCCBakery.Models
 {
-    public class CartItem : IEquatable<CartItem>
+    public class CartItem
     {
-        public bool Equals(CartItem other)
-        {
-            throw new NotImplementedException();
-        }
+        public int CartItemID { get; set; }
 
-        List<CartItem> Items { get; set; }
+        //public int CartID { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int InvoiceID { get; set; }
+        //public System.DateTime OrderTime { get; set; }
 
-        [Required]
+        public virtual Product Product { get; set; }
+
         public int ProductID { get; set; }
 
-        [Required]
-        public string ProductName { get; set; }
-
-        [Required]
-        public string ProductDescription { get; set; }
-
-        public decimal ProductPrice { get; set; }
+        public string Description { get; set; }
 
         public int Quantity { get; set; }
+
+        public decimal CartItemPrice { get; set; }
+
+        public decimal CartItemTotalPrice { get; set; }
+
+        public CartItem() { }
+
+        public CartItem(int productID)
+        {
+            this.ProductID = productID;
+            this.Quantity = 1;
+        }
+
+        public CartItem(int productID, int quantity)
+        {
+            this.ProductID = productID;
+            this.Quantity = quantity;
+        }
+
+        //used by Contains()
+        public bool Equals(CartItem item)
+        {
+            return item.ProductID == ProductID;
+        }
     }
 }

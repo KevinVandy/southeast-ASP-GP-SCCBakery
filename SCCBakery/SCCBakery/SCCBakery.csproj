@@ -199,6 +199,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoryManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductsViewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,14 @@
     <Compile Include="Migrations\201808280044034_addedthings.Designer.cs">
       <DependentUpon>201808280044034_addedthings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808292315540_updatedproducts.cs" />
+    <Compile Include="Migrations\201808292315540_updatedproducts.Designer.cs">
+      <DependentUpon>201808292315540_updatedproducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808292328480_adjustedproduct.cs" />
+    <Compile Include="Migrations\201808292328480_adjustedproduct.Designer.cs">
+      <DependentUpon>201808292328480_adjustedproduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -219,8 +228,9 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
+    <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -293,6 +303,11 @@
     <Content Include="Views\InventoryManagement\Details.cshtml" />
     <Content Include="Views\InventoryManagement\Edit.cshtml" />
     <Content Include="Views\InventoryManagement\Index.cshtml" />
+    <Content Include="Views\ProductsView\Create.cshtml" />
+    <Content Include="Views\ProductsView\Delete.cshtml" />
+    <Content Include="Views\ProductsView\Details.cshtml" />
+    <Content Include="Views\ProductsView\Edit.cshtml" />
+    <Content Include="Views\ProductsView\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,6 +326,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808280044034_addedthings.resx">
       <DependentUpon>201808280044034_addedthings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808292315540_updatedproducts.resx">
+      <DependentUpon>201808292315540_updatedproducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808292328480_adjustedproduct.resx">
+      <DependentUpon>201808292328480_adjustedproduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
