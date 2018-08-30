@@ -10,107 +10,107 @@ using SCCBakery.Models;
 
 namespace SCCBakery.Controllers
 {
-    public class ProductsViewController : Controller
+    public class InventoryManagementController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: ProductsView
+        // GET: InventoryManagement
         public ActionResult Index()
         {
             return View(db.AProduct.ToList());
         }
 
-        // GET: ProductsView/Details/5
+        // GET: InventoryManagement/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product products = db.AProduct.Find(id);
-            if (products == null)
+            Product product = db.AProduct.Find(id);
+            if (product == null)
             {
                 return HttpNotFound();
             }
-            return View(products);
+            return View(product);
         }
 
-        // GET: ProductsView/Create
+        // GET: InventoryManagement/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: ProductsView/Create
+        // POST: InventoryManagement/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product products)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product)
         {
             if (ModelState.IsValid)
             {
-                db.AProduct.Add(products);
+                db.AProduct.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(products);
+            return View(product);
         }
 
-        // GET: ProductsView/Edit/5
+        // GET: InventoryManagement/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product products = db.AProduct.Find(id);
-            if (products == null)
+            Product product = db.AProduct.Find(id);
+            if (product == null)
             {
                 return HttpNotFound();
             }
-            return View(products);
+            return View(product);
         }
 
-        // POST: ProductsView/Edit/5
+        // POST: InventoryManagement/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product products)
+        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(products).State = EntityState.Modified;
+                db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(products);
+            return View(product);
         }
 
-        // GET: ProductsView/Delete/5
+        // GET: InventoryManagement/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product products = db.AProduct.Find(id);
-            if (products == null)
+            Product product = db.AProduct.Find(id);
+            if (product == null)
             {
                 return HttpNotFound();
             }
-            return View(products);
+            return View(product);
         }
 
-        // POST: ProductsView/Delete/5
+        // POST: InventoryManagement/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Product products = db.AProduct.Find(id);
-            db.AProduct.Remove(products);
+            Product product = db.AProduct.Find(id);
+            db.AProduct.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

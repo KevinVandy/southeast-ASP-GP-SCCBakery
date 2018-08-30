@@ -8,9 +8,8 @@ using System.Web;
 namespace SCCBakery.Models
 {
     [Table("Products")]
-    public class Products
+    public class Product
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ProductID { get; set; }
 
@@ -22,6 +21,7 @@ namespace SCCBakery.Models
         [Required]
         public decimal ProductPrice { get; set; }
 
+        [Required]
         public string ImagePath { get; set; }
 
     }
