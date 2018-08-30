@@ -20,9 +20,9 @@ namespace SCCBakery.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Invoice> Invoice { get; set; }
-        public DbSet<Order> Order { get; set; }
-        public DbSet<Product> Product { get; set;}
+        public DbSet<Invoice> AnInvoice { get; set; }
+        public DbSet<Order> AnOrder { get; set; }
+        public DbSet<Products> AProduct { get; set;}
         public DbSet<CustomerInfo> ACustomer { get; set; }
 
         public ApplicationDbContext()
