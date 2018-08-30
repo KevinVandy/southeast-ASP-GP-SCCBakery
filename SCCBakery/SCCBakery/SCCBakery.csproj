@@ -197,7 +197,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InventoryManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
     <Compile Include="Global.asax.cs">
@@ -228,7 +227,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -297,12 +296,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
-    <Content Include="Views\Cart\Experimental.cshtml" />
-    <Content Include="Views\InventoryManagement\Create.cshtml" />
-    <Content Include="Views\InventoryManagement\Delete.cshtml" />
-    <Content Include="Views\InventoryManagement\Details.cshtml" />
-    <Content Include="Views\InventoryManagement\Edit.cshtml" />
-    <Content Include="Views\InventoryManagement\Index.cshtml" />
     <Content Include="Views\ProductsView\Create.cshtml" />
     <Content Include="Views\ProductsView\Delete.cshtml" />
     <Content Include="Views\ProductsView\Details.cshtml" />

@@ -11,7 +11,7 @@ namespace SCCBakery.Models
         public ProductContext() : base("SCCBakery"){}
 
         //public DbSet<ProductType> ProductType { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Products> Products { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
             
     }

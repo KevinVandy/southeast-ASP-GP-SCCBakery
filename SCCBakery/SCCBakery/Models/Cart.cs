@@ -69,7 +69,6 @@ namespace SCCBakery.Models
             {
                 subTotal += cartItem.CartItemTotalPrice;
             }
-
             return subTotal;
         }
 
