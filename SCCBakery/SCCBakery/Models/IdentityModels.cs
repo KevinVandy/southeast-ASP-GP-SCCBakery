@@ -22,7 +22,7 @@ namespace SCCBakery.Models
     {
         public DbSet<Invoice> AnInvoice { get; set; }
         public DbSet<Order> AnOrder { get; set; }
-        public DbSet<Products> AProduct { get; set;}
+        public DbSet<Product> AProduct { get; set;}
         public DbSet<CustomerInfo> ACustomer { get; set; }
 
         public ApplicationDbContext()
