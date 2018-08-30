@@ -17,7 +17,7 @@ namespace SCCBakery.Controllers
         // GET: InventoryManagement
         public ActionResult Index()
         {
-            return View(db.Product.ToList());
+            return View(db.AProduct.ToList());
         }
 
         // GET: InventoryManagement/Details/5
@@ -27,7 +27,7 @@ namespace SCCBakery.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Products product = db.AProduct.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace SCCBakery.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Products product)
         {
             if (ModelState.IsValid)
             {
-                db.Product.Add(product);
+                db.AProduct.Add(product);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace SCCBakery.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Products product = db.AProduct.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace SCCBakery.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Products product)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace SCCBakery.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Product product = db.Product.Find(id);
+            Products product = db.AProduct.Find(id);
             if (product == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace SCCBakery.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Product product = db.Product.Find(id);
-            db.Product.Remove(product);
+            Products product = db.AProduct.Find(id);
+            db.AProduct.Remove(product);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
