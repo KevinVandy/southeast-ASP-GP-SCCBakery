@@ -228,7 +228,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\ProductContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
