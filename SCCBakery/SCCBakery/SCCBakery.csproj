@@ -241,6 +241,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\Bakery1.jpg" />
     <Content Include="Images\Bakery2.jpg" />
+    <Content Include="Images\carrotCake.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
