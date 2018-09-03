@@ -218,6 +218,10 @@
     <Compile Include="Migrations\201808292328480_adjustedproduct.Designer.cs">
       <DependentUpon>201808292328480_adjustedproduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809030049133_connectToDB.cs" />
+    <Compile Include="Migrations\201809030049133_connectToDB.Designer.cs">
+      <DependentUpon>201809030049133_connectToDB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -334,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808292328480_adjustedproduct.resx">
       <DependentUpon>201808292328480_adjustedproduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809030049133_connectToDB.resx">
+      <DependentUpon>201809030049133_connectToDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

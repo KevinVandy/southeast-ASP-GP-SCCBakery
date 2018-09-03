@@ -26,7 +26,8 @@ namespace SCCBakery.Models
         public DbSet<CustomerInfo> ACustomer { get; set; }
 
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("SCCBakery1", throwIfV1Schema: false)
+        //: base("DefaultConnection", throwIfV1Schema: false)
         {
         }
 

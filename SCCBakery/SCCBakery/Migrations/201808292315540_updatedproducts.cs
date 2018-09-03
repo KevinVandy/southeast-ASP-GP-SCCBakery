@@ -7,7 +7,7 @@ namespace SCCBakery.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Products", "ImagePath", c => c.String());
+            //AddColumn("dbo.Products", "ImagePath", c => c.String());
         }
         
         public override void Down()
