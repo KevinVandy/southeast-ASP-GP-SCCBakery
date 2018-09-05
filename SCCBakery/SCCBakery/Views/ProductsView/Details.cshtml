@@ -42,7 +42,12 @@
             @Html.DisplayFor(model => model.ImagePath)
             <img src="@Url.Content(@Model.ImagePath)" height="100" width="100" />
         </dd>
-
+        <dt>
+            Add Item to Cart
+        </dt>
+        <dd>
+            @Html.ActionLink("", "", new { productId = Model.ProductID})
+        </dd>
     </dl>
 </div>
 <p>
