@@ -1,0 +1,16 @@
+namespace SCCBakery.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class updateOrder : DbMigration
+    {
+        public override void Up()
+        {
+        }
+        
+        public override void Down()
+        {
+        }
+    }
+}

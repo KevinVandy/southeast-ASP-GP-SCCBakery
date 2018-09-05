@@ -229,6 +229,10 @@
     <Compile Include="Migrations\201809052320289_fixDBContext.Designer.cs">
       <DependentUpon>201809052320289_fixDBContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809052351478_updateOrder.cs" />
+    <Compile Include="Migrations\201809052351478_updateOrder.Designer.cs">
+      <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -362,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809052320289_fixDBContext.resx">
       <DependentUpon>201809052320289_fixDBContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809052351478_updateOrder.resx">
+      <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
