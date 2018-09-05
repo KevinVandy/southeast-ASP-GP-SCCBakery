@@ -10,7 +10,7 @@
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{852DD522-E20D-4B42-B8DF-0A0398EC590A}</ProjectGuid>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SCCBakery</RootNamespace>
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -197,6 +198,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InventoryManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
     <Compile Include="Global.asax.cs">
@@ -234,6 +236,9 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\ProductContext.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -316,6 +321,11 @@
     <Content Include="Views\ProductsView\Details.cshtml" />
     <Content Include="Views\ProductsView\Edit.cshtml" />
     <Content Include="Views\ProductsView\Index.cshtml" />
+    <Content Include="Views\InventoryManagement\Create.cshtml" />
+    <Content Include="Views\InventoryManagement\Delete.cshtml" />
+    <Content Include="Views\InventoryManagement\Details.cshtml" />
+    <Content Include="Views\InventoryManagement\Edit.cshtml" />
+    <Content Include="Views\InventoryManagement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
