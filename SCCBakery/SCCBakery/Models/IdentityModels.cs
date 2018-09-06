@@ -35,5 +35,7 @@ namespace SCCBakery.Models
         {
             return new ApplicationDbContext();
         }
+
+       // public System.Data.Entity.DbSet<SCCBakery.Models.CartItem> CartItems { get; set; }
     }
 }

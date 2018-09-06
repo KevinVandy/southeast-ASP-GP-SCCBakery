@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoryManagementController.cs" />
+    <Compile Include="Controllers\InvoiceManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersManagementController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
@@ -229,12 +230,17 @@
     <Compile Include="Migrations\201809052320289_fixDBContext.Designer.cs">
       <DependentUpon>201809052320289_fixDBContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809052351478_updateOrder.cs" />
+    <Compile Include="Migrations\201809052351478_updateOrder.Designer.cs">
+      <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderInvoiceView.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
@@ -244,14 +250,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-SCCBakery-20180826063833.mdf" />
-    <Content Include="App_Data\aspnet-SCCBakery-20180826063833_log.ldf">
-      <DependentUpon>aspnet-SCCBakery-20180826063833.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\DefaultConnection.mdf" />
-    <Content Include="App_Data\DefaultConnection_log.ldf">
-      <DependentUpon>DefaultConnection.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -264,15 +262,6 @@
     <Content Include="Images\Blueberry.jpg" />
     <Content Include="Images\carrotCake.jpg" />
     <Content Include="Images\Chocolate-Mint.jpg" />
-    <Content Include="Images\ProductImages\bagel-salt.png" />
-    <Content Include="Images\ProductImages\bagel.jpg" />
-    <Content Include="Images\ProductImages\bagels-bag.jpg" />
-    <Content Include="Images\ProductImages\carrotcake.jpg" />
-    <Content Include="Images\ProductImages\donut.jpg" />
-    <Content Include="Images\ProductImages\donuts.jpg" />
-    <Content Include="Images\ProductImages\muffin-blueberry.jpg" />
-    <Content Include="Images\ProductImages\muffin-blukeberrybanana.jpg" />
-    <Content Include="Images\ProductImages\muffin-chocolatemint.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -343,9 +332,15 @@
     <Content Include="Views\OrdersManagement\Details.cshtml" />
     <Content Include="Views\OrdersManagement\Edit.cshtml" />
     <Content Include="Views\OrdersManagement\Index.cshtml" />
-    <Content Include="Views\InventoryManagement\FileUpload.cshtml" />
+    <Content Include="Views\InvoiceManagement\Create.cshtml" />
+    <Content Include="Views\InvoiceManagement\Delete.cshtml" />
+    <Content Include="Views\InvoiceManagement\Details.cshtml" />
+    <Content Include="Views\InvoiceManagement\Edit.cshtml" />
+    <Content Include="Views\InvoiceManagement\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -372,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809052320289_fixDBContext.resx">
       <DependentUpon>201809052320289_fixDBContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809052351478_updateOrder.resx">
+      <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
