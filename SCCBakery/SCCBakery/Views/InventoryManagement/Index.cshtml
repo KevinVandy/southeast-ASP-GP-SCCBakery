@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SCCBakery.Models.Product>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Inventory Management";
 }
 
-<h2>Index</h2>
+<h2>Inventory Management</h2>
 
 
 <table class="table">
@@ -36,7 +36,7 @@
             @Html.DisplayFor(modelItem => item.ProductPrice)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImagePath)
+            <img src="@Url.Content(item.ImagePath)" height="100" width="100" />
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ProductID }) |
@@ -48,5 +48,6 @@
 
 </table>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create")<br>
+    @Html.ActionLink("Upload Image", "FileUpload")
 </p>

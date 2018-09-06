@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SCCBakery.Models;
+using System.IO;
+using System.Drawing;
 
 namespace SCCBakery.Controllers
 {
@@ -46,7 +48,7 @@ namespace SCCBakery.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product)
+        public ActionResult Create([Bind(Include = "ProductID,ProductName,ProductDescription,ProductPrice,ImagePath")] Product product, Image img, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -56,6 +58,26 @@ namespace SCCBakery.Controllers
             }
 
             return View(product);
+        }
+        public ActionResult FileUpload()
+        {
+            return View();
+        }
+        
+        [HttpPost]
+        public ActionResult FileUpload(HttpPostedFileBase file)
+        {
+            if (file != null)
+            {
+                string pic = System.IO.Path.GetFileName(file.FileName);
+                string path = System.IO.Path.Combine(
+                                       Server.MapPath("~/Images/ProductImages/"), pic);
+                // file is uploaded
+                file.SaveAs(path);
+
+            }
+            // after successfully uploading redirect the user
+            return RedirectToAction("Index");
         }
 
         // GET: InventoryManagement/Edit/5
@@ -123,5 +145,6 @@ namespace SCCBakery.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }
