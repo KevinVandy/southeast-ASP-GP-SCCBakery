@@ -239,6 +239,7 @@
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderInvoiceView.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
