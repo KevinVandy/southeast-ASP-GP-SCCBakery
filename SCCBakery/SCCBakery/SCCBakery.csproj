@@ -197,7 +197,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CartItemsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoryManagementController.cs" />
     <Compile Include="Controllers\InvoiceManagementController.cs" />
@@ -233,7 +232,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -334,11 +332,6 @@
     <Content Include="Views\InvoiceManagement\Details.cshtml" />
     <Content Include="Views\InvoiceManagement\Edit.cshtml" />
     <Content Include="Views\InvoiceManagement\Index.cshtml" />
-    <Content Include="Views\CartItems\Create.cshtml" />
-    <Content Include="Views\CartItems\Delete.cshtml" />
-    <Content Include="Views\CartItems\Details.cshtml" />
-    <Content Include="Views\CartItems\Edit.cshtml" />
-    <Content Include="Views\CartItems\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
