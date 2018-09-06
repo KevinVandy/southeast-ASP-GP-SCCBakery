@@ -28,11 +28,11 @@ namespace SCCBakery.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Order order = db.AnOrder.Find(id);
-            //Invoice order = db.AnInvoice.Find(id);
-            OrderInvoiceView order = new OrderInvoiceView();
+            Invoice order = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
+            //OrderInvoiceView order = new OrderInvoiceView();
 
-            order.anOrder = db.AnOrder.Find(id);
-            order.anInvoice = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
+            //order.anOrder = db.AnOrder.Find(id);
+            //order.anInvoice = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
             if (order == null)
             {
                 return HttpNotFound();
