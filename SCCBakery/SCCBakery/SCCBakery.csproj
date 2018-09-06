@@ -199,6 +199,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoryManagementController.cs" />
+    <Compile Include="Controllers\InvoiceManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\OrdersManagementController.cs" />
     <Compile Include="Controllers\ProductsViewController.cs" />
@@ -249,14 +250,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-SCCBakery-20180826063833.mdf" />
-    <Content Include="App_Data\aspnet-SCCBakery-20180826063833_log.ldf">
-      <DependentUpon>aspnet-SCCBakery-20180826063833.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\DefaultConnection.mdf" />
-    <Content Include="App_Data\DefaultConnection_log.ldf">
-      <DependentUpon>DefaultConnection.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -339,8 +332,15 @@
     <Content Include="Views\OrdersManagement\Details.cshtml" />
     <Content Include="Views\OrdersManagement\Edit.cshtml" />
     <Content Include="Views\OrdersManagement\Index.cshtml" />
+    <Content Include="Views\InvoiceManagement\Create.cshtml" />
+    <Content Include="Views\InvoiceManagement\Delete.cshtml" />
+    <Content Include="Views\InvoiceManagement\Details.cshtml" />
+    <Content Include="Views\InvoiceManagement\Edit.cshtml" />
+    <Content Include="Views\InvoiceManagement\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
