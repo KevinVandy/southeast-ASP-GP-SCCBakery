@@ -2,13 +2,13 @@
     ViewBag.Title = "Image Upload";
 }
 
-<h2>Image Upload</h2>
+<h2>Upload Image</h2>
 
 
 @using (Html.BeginForm("FileUpload", "InventoryManagement", FormMethod.Post,
                                         new { enctype = "multipart/form-data" }))
 {
-    <label for="file">Upload Image:</label>
+    <label for="file">Select a file to upload. Please edit the size before uploading to 100px X 100px:</label>
     <input type="file" name="file" id="file" style="width: 100%;" />
     <input type="submit" value="Upload" class="submit" />
 }

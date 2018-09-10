@@ -337,6 +337,7 @@
     <Content Include="Views\InvoiceManagement\Details.cshtml" />
     <Content Include="Views\InvoiceManagement\Edit.cshtml" />
     <Content Include="Views\InvoiceManagement\Index.cshtml" />
+    <Content Include="Views\InventoryManagement\FileUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
