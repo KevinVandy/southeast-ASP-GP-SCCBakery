@@ -28,9 +28,9 @@ namespace SCCBakery.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             //Order order = db.AnOrder.Find(id);
-            Invoice order = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
+            //Invoice order = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
             //OrderInvoiceView order = new OrderInvoiceView();
-
+            var order = (db.AnInvoice.Include(i => i.TheOrder).Include(i => i.TheProduct).Where(x => x.OrderID == id)).ToList();
             //order.anOrder = db.AnOrder.Find(id);
             //order.anInvoice = db.AnInvoice.FirstOrDefault(x => x.OrderID == id);
             if (order == null)

@@ -24,6 +24,8 @@ namespace SCCBakery.Models
         public DbSet<Order> AnOrder { get; set; }
         public DbSet<Product> AProduct { get; set;}
         public DbSet<CustomerInfo> ACustomer { get; set; }
+        public DbSet<CartItem> ACartItem { get; set; }
+        public DbSet<Cart> ACart { get; set; }
 
         public ApplicationDbContext()
             : base("SCCBakery1", throwIfV1Schema: false)
@@ -36,6 +38,8 @@ namespace SCCBakery.Models
             return new ApplicationDbContext();
         }
 
-       // public System.Data.Entity.DbSet<SCCBakery.Models.CartItem> CartItems { get; set; }
+        public System.Data.Entity.DbSet<SCCBakery.Models.Cart> Carts { get; set; }
+
+        // public System.Data.Entity.DbSet<SCCBakery.Models.CartItem> CartItems { get; set; }
     }
 }
