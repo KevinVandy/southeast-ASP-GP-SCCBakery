@@ -35,11 +35,19 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ImagePath)
+            Product Image Path
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.ImagePath)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content(@Model.ImagePath)" height="100" width="100" />
         </dd>
 
     </dl>
