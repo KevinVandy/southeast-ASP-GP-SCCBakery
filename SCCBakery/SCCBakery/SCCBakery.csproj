@@ -262,6 +262,17 @@
     <Content Include="Images\Blueberry.jpg" />
     <Content Include="Images\carrotCake.jpg" />
     <Content Include="Images\Chocolate-Mint.jpg" />
+    <Content Include="Images\ProductImages\bagel-salt.png" />
+    <Content Include="Images\ProductImages\bagel.jpg" />
+    <Content Include="Images\ProductImages\bagels-bag.jpg" />
+    <Content Include="Images\ProductImages\carrotcake.jpg" />
+    <Content Include="Images\ProductImages\donut.jpg" />
+    <Content Include="Images\ProductImages\donuts.jpg" />
+    <Content Include="Images\ProductImages\muffin-blueberry.jpg" />
+    <Content Include="Images\ProductImages\muffin-blukeberrybanana.jpg" />
+    <Content Include="Images\ProductImages\muffin-chocolatemint.jpg" />
+    <Content Include="Images\ProductImages\Pumpkin-Cream-Cheese.jpg" />
+    <Content Include="Images\ProductImages\Raspberry.jpg" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
