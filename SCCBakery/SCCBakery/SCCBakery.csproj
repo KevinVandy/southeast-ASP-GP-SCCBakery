@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201809052351478_updateOrder.Designer.cs">
       <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809102340112_addCart.cs" />
+    <Compile Include="Migrations\201809102340112_addCart.Designer.cs">
+      <DependentUpon>201809102340112_addCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Cart.cs" />
@@ -382,6 +386,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809052351478_updateOrder.resx">
       <DependentUpon>201809052351478_updateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809102340112_addCart.resx">
+      <DependentUpon>201809102340112_addCart.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
