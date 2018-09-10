@@ -18,6 +18,7 @@ namespace SCCBakery.Controllers
         public ActionResult Index()
         {
             var anInvoice = db.AnInvoice.Include(i => i.TheOrder).Include(i => i.TheProduct);
+
             return View(anInvoice.ToList());
         }
 
