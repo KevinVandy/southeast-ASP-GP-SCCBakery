@@ -10,12 +10,13 @@ using SCCBakery.Models;
 
 namespace SCCBakery.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class OrdersManagementController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: OrdersManagement
-        [Authorize(Roles = "Admin")]
+        
         public ActionResult Index()
         {
             return View(db.AnOrder.ToList());
