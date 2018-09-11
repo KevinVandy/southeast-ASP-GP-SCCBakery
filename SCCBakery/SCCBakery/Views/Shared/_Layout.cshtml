@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,7 +27,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Products", "Index", "ProductsView")</li>
                     <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
-                    @if (!User.IsInRole("Admin"))
+                    @if (Request.IsAuthenticated)
                     {
                     <li>@Html.ActionLink("Inventory Management", "Index", "InventoryManagement")</li>
                     <li>@Html.ActionLink("Orders Management", "Index", "OrdersManagement")</li>
@@ -39,7 +40,7 @@
     </div>
     <div class="container body-content">
         <hr>
-        <br/>
+        <br>
         @RenderBody()
         <hr />
         <footer>
