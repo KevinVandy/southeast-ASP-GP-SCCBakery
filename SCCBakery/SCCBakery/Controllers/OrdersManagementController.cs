@@ -15,6 +15,7 @@ namespace SCCBakery.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: OrdersManagement
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             return View(db.AnOrder.ToList());
