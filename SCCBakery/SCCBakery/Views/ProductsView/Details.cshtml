@@ -46,7 +46,7 @@
             Add Item to Cart
         </dt>
         <dd>
-            @*@Html.ActionLink("", "", new { productId = Model.ProductID})*@
+            @Html.ActionLink("Add to Cart", "Create", "CartsController", new { productId = Model.ProductID}, null)
         </dd>
     </dl>
 </div>

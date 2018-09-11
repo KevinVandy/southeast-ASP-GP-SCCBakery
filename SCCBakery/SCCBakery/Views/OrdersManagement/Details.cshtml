@@ -36,9 +36,9 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.InvoiceID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.InvoiceID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.InvoiceID })
+                @Html.ActionLink("Edit", "Edit", "InvoiceManagementController", new { id = item.InvoiceID }, null) |
+                @Html.ActionLink("Details", "Details", "InvoiceManagementController", new { id = item.InvoiceID }, null) |
+                @Html.ActionLink("Delete", "Delete", "InvoiceManagementController", new { id = item.InvoiceID }, null)
             </td>
         </tr>
     }
