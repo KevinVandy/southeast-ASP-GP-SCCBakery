@@ -15,7 +15,7 @@ namespace SCCBakery.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: InvoiceManagement
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Administrator")]
         public ActionResult Index()
         {
             var anInvoice = db.AnInvoice.Include(i => i.TheOrder).Include(i => i.TheProduct);
