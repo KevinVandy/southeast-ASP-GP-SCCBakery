@@ -4,11 +4,8 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Bakery Product</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -33,7 +30,7 @@
             $@Html.DisplayFor(modelItem => item.ProductPrice)
         </td>
         <td>
-            <img src="@Url.Content(item.ImagePath)" height="100" width="100" />
+            <img src="@Url.Content("Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
         </td>
         <td>
             @Html.ActionLink("Details", "Details", new { id=item.ProductID })
