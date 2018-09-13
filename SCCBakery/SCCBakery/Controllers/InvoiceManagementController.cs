@@ -31,6 +31,8 @@ namespace SCCBakery.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Invoice invoice = db.AnInvoice.Find(id);
+            Order order = db.AnOrder.Find(invoice.OrderID);
+            Product product = db.AProduct.Find(invoice.ProductID);
             if (invoice == null)
             {
                 return HttpNotFound();

@@ -35,6 +35,9 @@
         <td>
             @Html.ActionLink("Details", "Details", new { id=item.ProductID })
         </td>
+        <td>
+            @Html.ActionLink("Add to Cart", "../Carts/Index", new { id = item.ProductID })
+        </td>
     </tr>
 }
 
