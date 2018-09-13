@@ -28,3 +28,31 @@ textarea {
       background-image:  url('../images/Bakery2.jpg');
       text-align: center;
 }
+
+.productDisplay {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px auto;
+    width: 20%;
+    text-align: center;
+}
+
+.productDisplay h3{
+    font-size: 1.6em;
+}
+
+.productDisplay h4{
+    color: darkred;
+}
+
+.productDisplay p{
+    padding: 5px;
+}
+
+.productDisplay img{
+    padding: 5px;
+    text-align: center;
+    min-width: 120px;
+    min-height: 120px;
+   
+}
