@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Orders Management</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", "InvoiceManagement" )
 </p>
 <table class="table">
     <tr>
@@ -36,9 +36,9 @@
                 @Html.DisplayFor(modelItem => item.Quantity)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", "InvoiceManagementController", new { id = item.InvoiceID }, null) |
-                @Html.ActionLink("Details", "Details", "InvoiceManagementController", new { id = item.InvoiceID }, null) |
-                @Html.ActionLink("Delete", "Delete", "InvoiceManagementController", new { id = item.InvoiceID }, null)
+                @Html.ActionLink("Edit", "Edit", "InvoiceManagement", new { id = item.InvoiceID }, null) |
+                @Html.ActionLink("Details", "Details", "InvoiceManagement", new { id = item.InvoiceID }, null) |
+                @Html.ActionLink("Delete", "Delete", "InvoiceManagement", new { id = item.InvoiceID }, null)
             </td>
         </tr>
     }
