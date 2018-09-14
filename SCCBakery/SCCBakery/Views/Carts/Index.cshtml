@@ -1,4 +1,5 @@
-﻿@model IEnumerable<SCCBakery.Models.Cart>
+﻿@model IEnumerable<SCCBakery.Models.Product>
+    @using SCCBakery.Models;
 
 @{
     ViewBag.Title = "Index";
@@ -12,22 +13,45 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.CustomerID)
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@{
+    var cartItems = Session["CartItems"] as List<Product>;
+
+    foreach (var item in cartItems)
+    {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.CustomerID)
+            @Html.DisplayFor(modelItem => item.ProductName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CartID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CartID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CartID })
+            @Html.DisplayFor(modelItem => item.ProductDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
         </td>
     </tr>
-}
+        }
+    }
 
 </table>

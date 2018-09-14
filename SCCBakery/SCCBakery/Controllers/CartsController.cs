@@ -10,14 +10,24 @@ using SCCBakery.Models;
 
 namespace SCCBakery.Controllers
 {
+
+
     public class CartsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        List<Product> theProducts = new List<Product>();
 
         // GET: Carts
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
-            return View(db.Carts.ToList());
+            Product aProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
+
+            
+            theProducts.Add(aProduct);
+
+            Session["CartItems"] = theProducts;
+
+            return View(Session["CartItems"]);
         }
 
         // GET: Carts/Details/5
