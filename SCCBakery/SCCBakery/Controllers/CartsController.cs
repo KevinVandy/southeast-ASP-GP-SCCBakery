@@ -18,18 +18,20 @@ namespace SCCBakery.Controllers
         
         
         // GET: Carts
-        public ActionResult Index(int id = 0)
+        public ActionResult Index(int? id)
         {
             if (Session["CartItems"] == null)
             {
                 Session["CartItems"] = new List<Invoice>();
             }
 
-            if (id != 0)
+            if (id != null)
             {
                 Invoice anInvoice = db.AnInvoice.FirstOrDefault(x => x.ProductID == id);
                 ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
             }
+
+            id = null;
             
             return View(Session["CartItems"]);
         }
