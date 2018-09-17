@@ -46,8 +46,7 @@
             <img src="@Url.Content("Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
+            @Html.ActionLink("Details", "../ProductsView/Details", new { id = item.ProductID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
         </td>
     </tr>
