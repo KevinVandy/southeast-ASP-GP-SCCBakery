@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SCCBakery.Models.Product>
+﻿@model IEnumerable<SCCBakery.Models.Invoice>
     @using SCCBakery.Models;
 
 @{
@@ -13,37 +13,43 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProductName)
+            @Html.DisplayNameFor(model => model.TheProduct.ProductName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProductDescription)
+            @Html.DisplayNameFor(model => model.TheProduct.ProductDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ProductPrice)
+            @Html.DisplayNameFor(model => model.TheProduct.ProductPrice)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImagePath)
+            @Html.DisplayNameFor(model => model.TheProduct.ImagePath)
+        </th>
+        <th>
+            Quantity
         </th>
         <th></th>
     </tr>
 
 @{
-    var cartItems = Session["CartItems"] as List<Product>;
+    var cartItems = Session["CartItems"] as List<Invoice>;
 
     foreach (var item in cartItems)
     {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ProductName)
+            @Html.DisplayFor(modelItem => item.TheProduct.ProductName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProductDescription)
+            @Html.DisplayFor(modelItem => item.TheProduct.ProductDescription)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ProductPrice)
+            @Html.DisplayFor(modelItem => item.TheProduct.ProductPrice)
         </td>
         <td>
-            <img src="@Url.Content("Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
+            <img src="@Url.Content("Images/ProductImages/" + item.TheProduct.ImagePath)" height="100" width="100" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
