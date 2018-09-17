@@ -15,23 +15,22 @@ namespace SCCBakery.Controllers
     public class CartsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        //List<Product> theProducts;
+        
         
         // GET: Carts
-        public ActionResult Index(int id)
+        public ActionResult Index(int id = 0)
         {
-            Product aProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
-
-            if(Session["CartItems"] == null)
+            if (Session["CartItems"] == null)
             {
                 Session["CartItems"] = new List<Product>();
             }
 
-            ((List<Product>)Session["CartItems"]).Add(aProduct);
-
-            //Session["CartItems"] = theProducts;
-
-
+            if (id != 0)
+            {
+                Product aProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
+                ((List<Product>)Session["CartItems"]).Add(aProduct);
+            }
+            
             return View(Session["CartItems"]);
         }
 

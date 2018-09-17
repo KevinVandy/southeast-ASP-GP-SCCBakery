@@ -54,5 +54,5 @@ textarea {
     text-align: center;
     min-width: 120px;
     min-height: 120px;
-   
+   border-radius: 10px;
 }
