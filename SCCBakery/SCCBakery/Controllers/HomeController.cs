@@ -13,7 +13,7 @@ namespace SCCBakery.Controllers
 
         public ActionResult Index()
         {
-            return View(db.AProduct.ToList());
+            return View(db.AProduct.Take(5).ToList());
         }
 
         public ActionResult About()
