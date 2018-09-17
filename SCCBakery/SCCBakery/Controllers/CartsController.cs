@@ -22,13 +22,13 @@ namespace SCCBakery.Controllers
         {
             if (Session["CartItems"] == null)
             {
-                Session["CartItems"] = new List<Product>();
+                Session["CartItems"] = new List<Invoice>();
             }
 
             if (id != 0)
             {
-                Product aProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
-                ((List<Product>)Session["CartItems"]).Add(aProduct);
+                Invoice anInvoice = db.AnInvoice.FirstOrDefault(x => x.ProductID == id);
+                ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
             }
             
             return View(Session["CartItems"]);
