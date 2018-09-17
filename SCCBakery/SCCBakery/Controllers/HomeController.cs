@@ -13,9 +13,7 @@ namespace SCCBakery.Controllers
 
         public ActionResult Index()
         {
-            //.take() limits the number of database returns
-            return View(db.AProduct.Take(5).ToList());
-            //return View();
+            return View(db.AProduct.ToList());
         }
 
         public ActionResult About()

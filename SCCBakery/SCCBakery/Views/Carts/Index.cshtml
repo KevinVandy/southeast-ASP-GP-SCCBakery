@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SCCBakery.Models.Product>
+﻿@model IEnumerable<SCCBakery.Models.Invoice>
     @using SCCBakery.Models;
 
 @{
@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.ImagePath)
         </th>
+        <th>
+            Quantity
+        </th>
         <th></th>
     </tr>
 
@@ -46,7 +49,8 @@
             <img src="@Url.Content("Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
         </td>
         <td>
-            @Html.ActionLink("Details", "../ProductsView/Details", new { id = item.ProductID }) |
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProductID }) |
             @Html.ActionLink("Delete", "Delete", new { id = item.ProductID })
         </td>
     </tr>
