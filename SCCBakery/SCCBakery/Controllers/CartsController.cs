@@ -45,6 +45,7 @@ namespace SCCBakery.Controllers
             
             return View(Session["CartItems"]);
         }
+
         [Authorize]
         public ActionResult CreateOrder()
         {
@@ -58,13 +59,16 @@ namespace SCCBakery.Controllers
                 orderTotal += i.TheProduct.ProductPrice;
             }
 
-            
+            theOrder = new Order(1, orderTime, orderTotal);
+
+            db.AnOrder.Add(theOrder);
 
             foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
             {
-                db.AnInvoice.Add(i);
-                db.SaveChanges();
+                db.AnInvoice.Add(i);    
             }
+
+            db.SaveChanges();
 
             return View(theOrder);
         }

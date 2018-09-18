@@ -21,5 +21,14 @@ namespace SCCBakery.Models
 
         
         public decimal OrderTotal { get; set; }
+
+        public Order() { }
+
+        public Order(int customerId, DateTime orderTime, decimal orderTotal)
+        {
+            CustomerID = customerId;
+            OrderTime = orderTime;
+            OrderTotal = orderTotal;
+        }
     }
 }
