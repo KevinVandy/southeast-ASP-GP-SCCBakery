@@ -42,7 +42,7 @@ namespace SCCBakery.Controllers
 
                 foreach(Invoice i in (List<Invoice>)Session["CartItems"])
                 {
-                    if (i.ProductID == id)
+                    if (i.TheProduct.ProductID == id)
                     {
                         i.Quantity++;
                         shouldAdd = false;
