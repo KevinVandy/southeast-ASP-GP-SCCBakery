@@ -64,6 +64,29 @@ namespace SCCBakery.Controllers
             
             return View(Session["CartItems"]);
         }
+        [Authorize]
+        public ActionResult CreateOrder()
+        {
+            Order theOrder;
+            decimal orderTotal = 0;
+            DateTime orderTime = new DateTime().ToLocalTime();
+
+
+            foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
+            {
+                orderTotal += i.TheProduct.ProductPrice;
+            }
+
+            
+
+            foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
+            {
+                db.AnInvoice.Add(i);
+                db.SaveChanges();
+            }
+
+            return View(theOrder);
+        }
 
         // GET: Carts/Details/5
         public ActionResult Details(int? id)
