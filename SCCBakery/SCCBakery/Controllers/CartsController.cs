@@ -67,7 +67,7 @@ namespace SCCBakery.Controllers
             Order theOrder = new Order();
             decimal orderTotal = 0;
             DateTime orderTime = DateTime.Today;
-
+            string user = System.Web.HttpContext.Current.User.Identity.Name;
             
 
 
@@ -76,7 +76,7 @@ namespace SCCBakery.Controllers
                 orderTotal += i.TheProduct.ProductPrice * i.Quantity;
             }
 
-            theOrder = new Order(1, orderTotal, orderTime);
+            theOrder = new Order(user, orderTotal, orderTime);
 
             db.AnOrder.Add(theOrder);
             db.SaveChanges();

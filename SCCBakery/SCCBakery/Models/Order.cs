@@ -13,8 +13,8 @@ namespace SCCBakery.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderID { get; set; }
 
-        
-        public int CustomerID { get; set; }
+        [MaxLength(256)]
+        public string CustomerID { get; set; }
 
         
         public DateTime OrderTime { get; set; }
@@ -24,7 +24,7 @@ namespace SCCBakery.Models
 
         public Order() { }
 
-        public Order(int customerId, decimal orderTotal, DateTime orderTime)
+        public Order(string customerId, decimal orderTotal, DateTime orderTime)
         {
             CustomerID = customerId;
             
