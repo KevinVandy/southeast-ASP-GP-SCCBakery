@@ -66,7 +66,9 @@ namespace SCCBakery.Controllers
         {
             Order theOrder = new Order();
             decimal orderTotal = 0;
-            DateTime orderTime = new DateTime();
+            DateTime orderTime = DateTime.Today;
+
+            
 
 
             foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
@@ -74,7 +76,7 @@ namespace SCCBakery.Controllers
                 orderTotal += i.TheProduct.ProductPrice * i.Quantity;
             }
 
-            theOrder = new Order(1, orderTotal);
+            theOrder = new Order(1, orderTotal, orderTime);
 
             db.AnOrder.Add(theOrder);
             db.SaveChanges();
