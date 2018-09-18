@@ -38,7 +38,26 @@ namespace SCCBakery.Controllers
                 anInvoice.TheProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
                 anInvoice.Quantity = (short)quantity;
 
-                ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
+                List<Invoice> invoice = (List<Invoice>)Session["CartItems"];
+
+                bool shouldAdd = true;
+
+                foreach(Invoice i in invoice)
+                {
+                    if (i.ProductID == anInvoice.TheProduct.ProductID)
+                    {
+                        
+                        quantity++;
+                        shouldAdd = false;
+                        break;
+                    }
+                }
+                
+                if(shouldAdd)
+                {
+                    ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
+                }
+                
             }
 
             id = null; //set to null to avoid bug
