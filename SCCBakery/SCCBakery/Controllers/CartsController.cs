@@ -16,7 +16,7 @@ namespace SCCBakery.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
         
-        
+        [Authorize]
         // GET: Carts
         public ActionResult Index(int? id, int? quantity)
         {
@@ -77,6 +77,15 @@ namespace SCCBakery.Controllers
             theOrder = new Order(1, orderTime, orderTotal);
 
             db.AnOrder.Add(theOrder);
+            db.SaveChanges();
+
+            Order currentOrder = db.AnOrder.OrderByDescending(x => x.OrderID).First();
+            int orderId = currentOrder.OrderID;
+
+            foreach(Invoice i in ((List<Invoice>)Session["CartItems"]))
+            {
+                i.OrderID = orderId;
+            }
 
             foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
             {
