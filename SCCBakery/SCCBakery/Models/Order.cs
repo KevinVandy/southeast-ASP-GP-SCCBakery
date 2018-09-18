@@ -24,10 +24,10 @@ namespace SCCBakery.Models
 
         public Order() { }
 
-        public Order(int customerId, DateTime orderTime, decimal orderTotal)
+        public Order(int customerId, decimal orderTotal)
         {
             CustomerID = customerId;
-            OrderTime = orderTime;
+            
             OrderTotal = orderTotal;
         }
     }
