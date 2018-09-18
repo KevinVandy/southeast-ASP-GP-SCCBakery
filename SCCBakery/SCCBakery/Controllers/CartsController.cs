@@ -71,7 +71,7 @@ namespace SCCBakery.Controllers
 
             foreach (Invoice i in ((List<Invoice>)Session["CartItems"]))
             {
-                orderTotal += i.TheProduct.ProductPrice;
+                orderTotal += i.TheProduct.ProductPrice * i.Quantity;
             }
 
             theOrder = new Order(1, orderTime, orderTotal);
