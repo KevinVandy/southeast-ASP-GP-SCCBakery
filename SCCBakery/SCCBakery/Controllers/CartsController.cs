@@ -37,11 +37,26 @@ namespace SCCBakery.Controllers
                 anInvoice.OrderID = 0;
                 anInvoice.TheProduct = db.AProduct.FirstOrDefault(x => x.ProductID == id);
                 anInvoice.Quantity = (short)quantity;
+                
+                bool shouldAdd = true;
 
-                ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
+                foreach(Invoice i in (List<Invoice>)Session["CartItems"])
+                {
+                    if (i.ProductID == id)
+                    {
+                        i.Quantity++;
+                        shouldAdd = false;
+                        break;
+                    }
+                }
+                if(shouldAdd)
+                {
+                    ((List<Invoice>)Session["CartItems"]).Add(anInvoice);
+                }
+                
             }
 
-            id = null; //set to null to avoid bug
+            //id = null; //set to null to avoid bug
             
             return View(Session["CartItems"]);
         }
@@ -49,7 +64,7 @@ namespace SCCBakery.Controllers
         [Authorize]
         public ActionResult CreateOrder()
         {
-            Order theOrder;
+            Order theOrder = new Order();
             decimal orderTotal = 0;
             DateTime orderTime = new DateTime().ToLocalTime();
 

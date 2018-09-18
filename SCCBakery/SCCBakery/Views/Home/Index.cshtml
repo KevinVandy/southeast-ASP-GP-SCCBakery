@@ -25,7 +25,7 @@
         <div class="productDisplay">
             <h3>@Html.DisplayFor(modelItem => item.ProductName)</h3> <h4>$@Html.DisplayFor(modelItem => item.ProductPrice)</h4>
             <br />
-            <img src="@Url.Content("Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
+            <img src="@Url.Content("~/Images/ProductImages/" + item.ImagePath)" height="100" width="100" />
             <br />
             <p>@Html.ActionLink("Details", "../ProductsView/Details", new { id = item.ProductID })</p>
             <p>@Html.ActionLink("Add to Cart", "../Carts/Index", new { id = item.ProductID })</p>
