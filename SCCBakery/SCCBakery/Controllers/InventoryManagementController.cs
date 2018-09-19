@@ -78,7 +78,7 @@ namespace SCCBakery.Controllers
 
             }
             // after successfully uploading redirect the user
-            return RedirectToAction("Index");
+            return RedirectToAction("Create");
         }
 
         // GET: InventoryManagement/Edit/5
